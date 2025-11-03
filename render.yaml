@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: joey-discord-bot
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: "pip install -r scripts/requirements.txt"
+    startCommand: "python scripts/bot.py"
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: WELCOME_CHANNEL_ID
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+    autoDeploy: true
