@@ -14,14 +14,20 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'[v0] {bot.user} is now online!')
     print(f'[v0] Bot is in {len(bot.guilds)} servers')
-    await bot.change_presence(activity=discord.Game(name="!help | Joey's Bot"))
+    await bot.change_presence(activity=discord.Game(name="/help | Joey's Bot"))
     
-    # Load all cogs
     await bot.load_extension('scripts.cogs.moderation')
     await bot.load_extension('scripts.cogs.utility')
     await bot.load_extension('scripts.cogs.custom_commands')
     await bot.load_extension('scripts.cogs.ai_chat')
+    await bot.load_extension('scripts.cogs.music')
     print('[v0] All cogs loaded successfully!')
+    
+    try:
+        synced = await bot.tree.sync()
+        print(f'[v0] Synced {len(synced)} slash commands')
+    except Exception as e:
+        print(f'[v0] Failed to sync commands: {e}')
 
 # Error handling
 @bot.event
