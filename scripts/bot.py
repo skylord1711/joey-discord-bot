@@ -21,7 +21,6 @@ async def on_ready():
     await bot.load_extension('scripts.cogs.music')
     await bot.load_extension('scripts.cogs.utility')
     await bot.load_extension('scripts.cogs.custom_commands')
-    await bot.load_extension('scripts.cogs.welcomer')
     await bot.load_extension('scripts.cogs.ai_chat')
     print('[v0] All cogs loaded successfully!')
 

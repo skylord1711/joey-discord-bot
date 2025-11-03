@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Load all cogs
 async def load_cogs():
-    cogs = ['moderation', 'music', 'utility', 'custom_commands', 'welcomer', 'ai_chat']
+    cogs = ['moderation', 'music', 'utility', 'custom_commands', 'ai_chat']
     for cog in cogs:
         try:
             await bot.load_extension(f'cogs.{cog}')

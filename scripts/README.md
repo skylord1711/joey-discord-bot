@@ -1,6 +1,6 @@
 # Joey's Discord Bot
 
-A comprehensive Discord bot with moderation, music, utility, custom commands, welcomer, and AI chat features!
+A comprehensive Discord bot with moderation, music, utility, custom commands, and AI chat features!
 
 ## Features
 
@@ -40,11 +40,6 @@ A comprehensive Discord bot with moderation, music, utility, custom commands, we
 - `!addcmd <trigger> <response>` - Add custom command
 - `!delcmd <trigger>` - Delete custom command
 - `!listcmds` - List all custom commands
-
-### 👋 Welcomer
-- `!setwelcome [#channel]` - Set welcome channel
-- Automatically welcomes new members
-- Says goodbye to leaving members
 
 ### 🤖 AI Chat
 - `!ask <question>` - Ask the AI anything
@@ -104,3 +99,7 @@ For 24/7 hosting, deploy to:
 ## Support
 
 For issues or questions, contact Joey or check the Discord.py documentation: https://discordpy.readthedocs.io/
+\`\`\`
+
+```py file="scripts/cogs/welcomer.py" isDeleted="true"
+...deleted...
