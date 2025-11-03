@@ -18,7 +18,6 @@ async def on_ready():
     
     # Load all cogs
     await bot.load_extension('scripts.cogs.moderation')
-    await bot.load_extension('scripts.cogs.music')
     await bot.load_extension('scripts.cogs.utility')
     await bot.load_extension('scripts.cogs.custom_commands')
     await bot.load_extension('scripts.cogs.ai_chat')
@@ -39,8 +38,8 @@ async def on_command_error(ctx, error):
 
 # Run the bot
 if __name__ == '__main__':
-    TOKEN = os.getenv('DISCORD_BOT_TOKEN')
+    TOKEN = os.getenv('DISCORD_TOKEN')
     if not TOKEN:
-        print('[v0] ERROR: DISCORD_BOT_TOKEN not found in environment variables!')
+        print('[v0] ERROR: DISCORD_TOKEN not found in environment variables!')
     else:
         bot.run(TOKEN)
